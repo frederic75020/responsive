@@ -1,0 +1,358 @@
+@charset "UTF-8";
+.container {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.centrage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* AGRANDISSEMENT ELEMENT  ADJACENT */
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #330529;
+  color: #b18cab;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.btn:active + .ball {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  background: orange;
+  margin-bottom: 1rem;
+  border-radius: 75px;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transition: -webkit-transform 2000ms;
+  transition: -webkit-transform 2000ms;
+  transition: transform 2000ms;
+  transition: transform 2000ms, -webkit-transform 2000ms;
+}
+
+.global {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.blocrouge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: brown;
+  color: white;
+  padding: 2rem;
+  width: 10%;
+  height: 10%;
+}
+
+.form__group input {
+  border: 2px solid #330529;
+  border-radius: 100rem;
+  color: #b18cab;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: .5rem 1.5rem;
+  width: 100%;
+}
+
+.form__group input :focus {
+  border: 2px solid #b18cab;
+}
+
+.form__group input :invalid {
+  background: 2px solid #b20a37;
+  color: #fff;
+}
+
+.form__group input :invalid :not(:focus):invalid {
+  background: #b20a37;
+  border: 2px solid #b20a37;
+  color: #fff;
+}
+
+/* AGRANDISSEMENT BOUTON PASSAGE SOURIS AVEC HOBER */
+.btn2 {
+  background: #011c37;
+  color: #15DEA5;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.btn2:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+/* BOUTON AGRANDISSEMENT ET FONDU */
+.btn3 {
+  background-color: rgba(1, 28, 55, 0);
+  border: 4px solid #011c37;
+  color: #15DEA5;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+  overflow: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: background-color 300ms 150ms, -webkit-transform 450ms;
+  transition: background-color 300ms 150ms, -webkit-transform 450ms;
+  transition: transform 450ms, background-color 300ms 150ms;
+  transition: transform 450ms, background-color 300ms 150ms, -webkit-transform 450ms;
+}
+
+.btn3:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+  background-color: #011c37;
+}
+
+/* BOUTON AVEC VITESSE TRANSITION MODIFIEE EASE IN OUT */
+.btn4 {
+  background-color: rgba(1, 28, 55, 0);
+  border: 4px solid #011c37;
+  color: #15DEA5;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 1.85rem 3rem;
+  border-radius: 10rem;
+  overflow: hidden;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: background-color 300ms 150ms ease-in-out, -webkit-transform 450ms;
+  transition: background-color 300ms 150ms ease-in-out, -webkit-transform 450ms;
+  transition: transform 450ms, background-color 300ms 150ms ease-in-out;
+  transition: transform 450ms, background-color 300ms 150ms ease-in-out, -webkit-transform 450ms;
+}
+
+.btn4:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+  background-color: #011c37;
+}
+
+/* modification de la boite juxtaposée */
+.btn-6 {
+  background-color: purple;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+.btn-6:hover + .box {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+.box {
+  background-color: green;
+  color: ivory;
+  padding: 1rem;
+  -webkit-transition: -webkit-transform 660ms ease-in-out;
+  transition: -webkit-transform 660ms ease-in-out;
+  transition: transform 660ms ease-in-out;
+  transition: transform 660ms ease-in-out, -webkit-transform 660ms ease-in-out;
+}
+
+/* étirement horizontal de la boite juxtaposée */
+.btn-7 {
+  background-color: purple;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.btn-7:hover + .box {
+  -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+}
+
+.box-2 {
+  background-color: green;
+  color: ivory;
+  padding: 1rem;
+  -webkit-transition: -webkit-transform 660ms ease-in-out;
+  transition: -webkit-transform 660ms ease-in-out;
+  transition: transform 660ms ease-in-out;
+  transition: transform 660ms ease-in-out, -webkit-transform 660ms ease-in-out;
+}
+
+/* déplacement de la boite juxtaposée */
+.btn-8 {
+  background-color: purple;
+  border: purple 3px solid;
+  font-size: 2rem;
+  border-radius: 50px;
+  color: white;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.btn-8:hover + .box {
+  -webkit-transform: translate(100px, 0);
+          transform: translate(100px, 0);
+}
+
+.box-3 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  color: ivory;
+  padding: 1rem;
+  -webkit-transition: -webkit-transform 660ms ease-in-out;
+  transition: -webkit-transform 660ms ease-in-out;
+  transition: transform 660ms ease-in-out;
+  transition: transform 660ms ease-in-out, -webkit-transform 660ms ease-in-out;
+}
+
+/* déplacement avec message */
+.btn-9 {
+  background-color: purple;
+  border: purple 3px solid;
+  font-size: 2rem;
+  border-radius: 50px;
+  color: white;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.btn-9:hover + .box {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.btn-9:hover + .box span {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.box-4 {
+  background-color: green;
+  color: ivory;
+  padding: 1rem;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transition: -webkit-transform 330ms ease-in-out;
+  transition: -webkit-transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+  overflow: hidden;
+}
+
+.box-4 span {
+  display: inline-block;
+  -webkit-transform: translateY(250%);
+          transform: translateY(250%);
+  -webkit-transition: -webkit-transform 280ms ease-out 50ms;
+  transition: -webkit-transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms;
+  transition: transform 280ms ease-out 50ms, -webkit-transform 280ms ease-out 50ms;
+}
+
+/* ROTATION */
+.btn-10 {
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  padding: 1.5rem;
+  border: black 3px solid;
+  border-radius: 50px;
+}
+
+.btn-10:hover + .boxes-5 > .boxes-5--rotDegrees {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.btn-10:hover + .boxes-5 > .boxes-5--rotTurns {
+  -webkit-transform: rotate(0turn);
+          transform: rotate(0turn);
+}
+
+.boxes-5--rotDegrees {
+  background: lightgreen;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.boxes-5--rotTurns {
+  background: pink;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  -webkit-transform: rotate(-1turn);
+          transform: rotate(-1turn);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

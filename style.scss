@@ -1,0 +1,267 @@
+$cd-btn: #330529;
+$cd-txt: rgb(177, 140, 171);
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.centrage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* AGRANDISSEMENT ELEMENT  ADJACENT */
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    background: $cd-btn;
+    color: $cd-txt;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+    transform: scale(1);
+    transition: transform 400ms;
+    &:active + .ball {
+        transform: scale(1.25);
+    }
+}
+$ball-size: 150px;
+$cd-secondary: orange;
+.ball {
+    width: $ball-size;
+    height: $ball-size;
+    background: $cd-secondary;
+    margin-bottom: 1rem;
+    border-radius: $ball-size * 0.5;
+    transform: scale(0.1);
+    transition: transform 2000ms;
+}
+.global {
+    display: flex;
+    flex-direction: row;
+}
+
+.blocrouge {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    color: white;
+    padding: 2rem;
+    width: 10%;
+    height: 10%;
+}
+$cd-box:  #330529;
+$cd-text--invalid: #fff;
+$cd-danger: #b20a37;
+.form {
+    &__group {
+        & input {
+        border: 2px solid $cd-box;
+        border-radius: 100rem;
+        color: $cd-txt;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        outline: none;
+        padding: .5rem 1.5rem;
+        width: 100%;
+        & :focus {
+            border: 2px solid $cd-txt;
+            }
+        & :invalid {
+            background: 2px solid $cd-danger;
+            color: $cd-text--invalid;
+        & :not(:focus):invalid {
+            background: $cd-danger;
+            border: 2px solid $cd-danger;
+            color: $cd-text--invalid;
+            }    
+        }    
+    }
+} 
+} 
+/* AGRANDISSEMENT BOUTON PASSAGE SOURIS AVEC HOBER */
+$cd-btn: #011c37;
+$cd-txt: #15DEA5;
+.btn2 {
+    background: $cd-btn;
+    color: $cd-txt;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+/* BOUTON AGRANDISSEMENT ET FONDU */
+$cd-btn: #011c37;
+$cd-txt: #15DEA5;
+$cd-btn-start: rgba(1, 28, 55, 0);
+$cd-btn-end: rgba(1, 28, 55, 1);
+.btn3 {
+    background-color: $cd-btn-start;
+    border: 4px solid $cd-btn;
+    color: $cd-txt;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+    overflow: hidden;
+    transform: scale(1);
+    transition-property: transform;
+    transition: transform 450ms, background-color 300ms 150ms;
+    &:hover {
+        transform: scale(1.13);
+        background-color: $cd-btn-end;
+    }
+}
+/* BOUTON AVEC VITESSE TRANSITION MODIFIEE EASE IN OUT */
+.btn4 {
+    background-color: $cd-btn-start;
+    border: 4px solid $cd-btn;
+    color: $cd-txt;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1.85rem 3rem;
+    border-radius: 10rem;
+    overflow: hidden;
+    transform: scale(1);
+    transition-property: transform;
+    transition: transform 450ms, background-color 300ms 150ms ease-in-out;
+    &:hover {
+        transform: scale(1.13);
+        background-color: $cd-btn-end;
+    }
+}
+/* modification de la boite juxtaposée */
+.btn-6 {
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 2rem; 
+    &:hover + .box {
+        transform: scale(2);
+    }
+}
+.box {
+    background-color: green;
+    color: ivory;
+    padding: 1rem;
+    transition: transform 660ms ease-in-out;
+}
+/* étirement horizontal de la boite juxtaposée */
+
+.btn-7 {
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    &:hover + .box {
+        transform: scaleX(2);
+    }
+}
+.box-2 {
+    background-color: green;
+    color: ivory;
+    padding: 1rem;
+    transition: transform 660ms ease-in-out;
+}    
+
+/* déplacement de la boite juxtaposée */
+
+.btn-8 {
+    background-color: purple;
+    border: purple 3px solid;
+    font-size: 2rem;
+    border-radius: 50px;
+    color: white;
+    padding: 2rem;
+    margin: 1rem;
+    &:hover + .box {
+        transform: translate(100px, 0);
+    }
+}
+.box-3  {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    color: ivory;
+    padding: 1rem;
+    transition: transform 660ms ease-in-out;
+}    
+/* déplacement avec message */
+.btn-9 {
+    background-color: purple;
+    border: purple 3px solid;
+    font-size: 2rem;
+    border-radius: 50px;
+    color: white;
+    padding: 2rem;
+    margin: 1rem;
+        &:hover + .box {
+        transform: scale(1);
+        span {
+            transform: scale(1);
+            }
+    }
+}
+.box-4  {
+    background-color: green;
+    color: ivory;
+    padding: 1rem;
+    transform: scale(0.1);
+    transition: transform 330ms ease-in-out;
+    overflow: hidden;
+        span {
+        display: inline-block;
+        transform: translateY(250%);
+        transition: transform 280ms ease-out 50ms;
+        }
+}    
+/* ROTATION */
+.btn-10 {
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 1.5rem;
+    border: black 3px solid;
+    border-radius: 50px;
+    &:hover + .boxes-5 {
+        & > .boxes-5--rotDegrees {
+            transform: rotate(0deg);
+        }
+        & > .boxes-5--rotTurns {
+             transform: rotate(0turn);
+        }
+    }
+
+}
+.boxes-5 {
+    &--rotDegrees {
+        background: lightgreen;
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem;
+        transform: rotate(-360deg);
+        transition: transform 500ms ease-in-out;
+    }
+     
+    &--rotTurns {
+        background: pink;
+        color: white;
+        font-size: 1.5rem;
+        padding: 1rem;
+        transform: rotate(-1turn);
+        transition: transform 500ms ease-in-out;
+    }
+}    
